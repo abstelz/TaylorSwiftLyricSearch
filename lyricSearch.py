@@ -57,6 +57,7 @@ with open('output.csv', 'r') as csv_file:
 '''
 import csv
 
+
 targetLyric = input("What word/phrase are you trying to find the song for?\n\033[1m")
 found = False
 results = 0
