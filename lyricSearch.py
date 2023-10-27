@@ -61,11 +61,12 @@ import csv
 targetLyric = input("What word/phrase are you trying to find the song for?\n\033[1m")
 found = False
 results = 0
+count = 0
 with open('output.csv', 'r') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=':')
     for row in csv_reader:
         lyric = row[2]
-
+        count += lyric.lower().count(targetLyric.lower())
         if lyric.lower().find(targetLyric.lower()) != -1:
             results += 1
 
@@ -120,4 +121,4 @@ with open('output.csv', 'r') as csv_file:
     if found is False:
         print("not found")
     else:
-        print(f"Showing result(s) from {results} song(s)")
+        print(f"Showing {count} result(s) from {results} song(s)")
