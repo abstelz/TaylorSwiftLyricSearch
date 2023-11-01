@@ -62,4 +62,4 @@ with open('output.csv', 'r') as csv_file:
     if found is False:
         print("not found")
     else:
-        print(f"Showing {count} result{"s" if count != 1} from {results} song{"s" if results != 1}")
+        print(f"Showing {count} result{"s" if count != 1 else ""} from {results} song{"s" if results != 1 else ""}")
