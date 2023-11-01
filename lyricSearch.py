@@ -55,9 +55,7 @@ with open('output.csv', 'r') as csv_file:
             lyricSub = lyricSub.replace(newTarget, f"\033[1m\033[{m}m{newTarget}\033[0m")
             print(lyricSub)
             found = True
-            endOfSong = lyric[next+2:]
-            # Update the lyric to the remaining part of the song.
-            lyric = endOfSong
+            lyric = lyric[next+2:]
 
     if found is False:
         print("not found")
