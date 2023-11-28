@@ -47,7 +47,7 @@ with open('output.csv', 'r') as csv_file:
                 "evermore": "38;2;139;69;19",
                 "Midnights": "38;2;0;0;139",
                 "Holiday": "47",
-            } #1
+            }
             for x in albumColors:
                 if row[1].find(x) != -1:
                     m = albumColors[x]  #depending on what album it is, change the color of the target
